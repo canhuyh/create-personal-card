@@ -1,0 +1,96 @@
+body {
+  padding: 10%;
+}
+
+.crop-image-popup {
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  z-index: 1;
+  display: none;
+  background: white;
+  padding: 35px;
+  border: 2px solid;
+  box-shadow: -8px -6px;
+
+  #blah-popup {
+    width: 250px;
+    height: 250px;
+    background: black;
+  }
+
+  .btn-option {
+    padding-bottom: 20px;
+    bottom: 10;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+#card {
+  margin: auto;
+  width: 600px;
+  padding: 20px 20px 40px 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+
+  form {
+    display: flex;
+
+    .card-image {
+      border: 1px solid black;
+      margin-right: 20px;
+      position: relative;
+
+      #blah {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .img-input-file {
+        position: absolute;
+        bottom: -40px;
+        color: transparent;
+        width: 55%;
+
+        &::-webkit-file-upload-button {
+          visibility: hidden;
+        }
+
+        &::before {
+          content: "Choose image";
+          color: black;
+          display: inline-block;
+          border: 1px solid;
+          border-radius: 20px;
+          padding: 5px 8px;
+          cursor: pointer;
+          padding: 0px 15px;
+        }
+      }
+    }
+
+    .card-info {
+      display: grid;
+      width: 70%;
+      position: relative;
+
+      label {
+        margin: 0;
+      }
+
+      .btn-submit {
+        position: absolute;
+        width: 100%;
+        bottom: -40px;
+      }
+    }
+  }
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 20px;
+}

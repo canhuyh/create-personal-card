@@ -1,0 +1,133 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="fb:app_id" content="437891104231995" />
+    <meta property="og:url" content="{{linkShareOnFacebook}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Your description" />
+    <meta
+      property="og:image"
+      content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/html2canvas/html2canvas.js"></script>
+    <script src="../js/html2canvas/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="/css/croppie.css" />
+    <script src="/js/croppie.js"></script>
+    <script src="https://kit.fontawesome.com/b1dd495d1a.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>CARD</title>
+  </head>
+  <body>
+    <main>
+      <div class="crop-image-popup">
+        <img id="blah-popup" src="{{img}}" name="img" alt="your image" />
+        <div class="btn-option">
+          <button class="button btn-get-image" type="button">Get result</button>
+          <button class="button btn-cancel" type="button">Cancel</button>
+        </div>
+      </div>
+
+      <div id="card">
+        <form action="/generator" method="post">
+          <div class="card-image">
+            <input
+              class="img-input-file"
+              type="file"
+              onchange="readURL(this);"
+              name="img"
+              accept="image/*"
+            />
+
+            <img id="blah" src="{{img}}" name="img" alt="your image" />
+          </div>
+
+          <div class="card-info">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" value="{{name}}" />
+            <label for="date-of-birth">Date of Birth</label>
+            <input
+              id="date-of-birth"
+              class="date-of-birth"
+              type="text"
+              name="date-of-birth"
+              value="{{name}}"
+            />
+            <label for="place-of-issue">Place of issue</label>
+            <input
+              id="place-of-issue"
+              class="place-of-issue"
+              type="text"
+              name="place-of-issue"
+              value="{{name}}"
+            />
+            <label for="date-of-issue">Date of Issue</label>
+            <input
+              id="date-of-issue"
+              class="date-of-issue"
+              type="text"
+              name="date-of-issue"
+              value="{{name}}"
+            />
+            <button class="button btn-submit" type="button">Submit</button>
+          </div>
+        </form>
+      </div>
+      <button class="button btn-download" type="button">down</button>
+      {{!-- <a
+        href="https://www.facebook.com/sharer/sharer.php?u={{linkShareOnFacebook}}"
+        target="_blank"
+        class="btn mx-1 text-uppercase letter-spaced result-button"
+        style="width: 150px; height: 56px;"
+      ><strong>Share On Facebook</strong></a> --}}
+
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=437891104231995&autoLogAppEvents=1"
+        nonce="blqVjs5g"
+      ></script>
+      <div
+        class="fb-share-button"
+        data-href="https://developers.facebook.com/docs/plugins/"
+        data-layout="button_count"
+        data-size="large"
+      ><a
+          target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+          class="fb-xfbml-parse-ignore"
+        >Chia sẻ</a></div>
+
+      <div id="previewImg"></div>
+    </main>
+  </body>
+  <script src="/js/download-image.js"></script>
+  <script src="/js/upload-img.js"></script>
+  <script src="/js/submit.js"></script>
+  <script src="/js/crop-img.js"></script>
+</html>
